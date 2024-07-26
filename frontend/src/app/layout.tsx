@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import {clsx} from "clsx";
+import Providers from "@/components/provider";
+import {Toaster} from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +19,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <meta httpEquiv="content-language" content="ja" />
+        <meta name="google" content="notranslate" />
+      </head>
+      <body className={clsx(inter.className, 'flex flex-col min-h-screen')}>
+        <Providers>
+          <main className="flex-grow">{children}</main>
+          <Toaster />
+        </Providers>
+      </body>
     </html>
   );
 }
