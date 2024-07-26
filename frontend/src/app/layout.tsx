@@ -10,6 +10,34 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Code | エンジニアのためのコード共有サービス",
   description: "Codeは構築済みアプリ、APIを共有するサービスです。Codeに共有されているコードを使ってアプリ開発、プログラミング勉強をスタートさせましょう。",
+  icons: {
+    apple: [
+        {
+            media: '(prefers-color-scheme: light)',
+            url: '/favicons/light/apple-touch-icon.png',
+            href: '/favicons/light/apple-touch-icon.png',
+        },
+        {
+            media: '(prefers-color-scheme: dark)',
+            url: '/favicons/dark/apple-touch-icon.png',
+            href: '/favicons/dark/apple-touch-icon.png',
+        },
+    ],
+    icon: [
+        {
+            media: '(prefers-color-scheme: light)',
+            type: 'image/png',
+            url: '/favicons/light/favicon-32x32.png',
+            href: '/favicons/light/favicon-32x32.png',
+        },
+        {
+            media: '(prefers-color-scheme: dark)',
+            type: 'image/png',
+            url: '/favicons/dark/favicon-32x32.png',
+            href: '/favicons/dark/favicon-32x32.png',
+        },
+    ]
+  },
 };
 
 export default function RootLayout({
