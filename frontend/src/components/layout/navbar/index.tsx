@@ -2,6 +2,7 @@ import Link from "next/link";
 import {clsx} from "clsx";
 import Logo from "@/components/logo";
 import {APP_NAME} from "@/lib/constants";
+import ThemeToggle from "@/components/layout/navbar/theme-toggle";
 
 
 export default function Navbar() {
@@ -31,6 +32,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex justify-end lg:gap-4 items-center">
+                    <ThemeToggle />
                     {/*<UserNav className={"hidden lg:flex"} />*/}
                     {/*<HouseholdNav />*/}
                     {/*<div className="lg:w-1/3">*/}

@@ -9,6 +9,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import {LaptopMinimal} from "lucide-react";
 
 
 export default function ThemeToggle({}: {}) {
@@ -23,14 +24,14 @@ export default function ThemeToggle({}: {}) {
                 </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => setTheme("light")}>
-                    Light
+                <DropdownMenuItem className="gap-1" onClick={() => setTheme("light")}>
+                    <SunIcon className="h-4 w-4" /> Light
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("dark")}>
-                    Dark
+                <DropdownMenuItem className="gap-1" onClick={() => setTheme("dark")}>
+                    <MoonIcon className="h-4 w-4" /> Dark
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setTheme("system")}>
-                    System
+                <DropdownMenuItem className="gap-1" onClick={() => setTheme("system")}>
+                    <LaptopMinimal className="h-4 w-4" /> System
                 </DropdownMenuItem>
             </DropdownMenuContent>
         </DropdownMenu>
