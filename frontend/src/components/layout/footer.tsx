@@ -1,7 +1,6 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import Logo from "@/components/layout/navbar/logo";
-import {APP_NAME} from "@/constants";
+import {APP_NAME} from "@/lib/constants";
 
 const Footer = () => {
     return (

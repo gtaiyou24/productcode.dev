@@ -4,7 +4,7 @@ import "./globals.css";
 import {clsx} from "clsx";
 import Providers from "@/components/provider";
 import {Toaster} from "@/components/ui/toaster";
-import {APP_NAME, BASE_URL, X_CREATOR} from "@/constants";
+import {APP_NAME, BASE_URL, X_CREATOR} from "@/lib/constants";
 import Footer from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });

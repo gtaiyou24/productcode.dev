@@ -1,7 +1,7 @@
 import Link from "next/link";
 import {clsx} from "clsx";
 import Logo from "@/components/layout/navbar/logo";
-import {APP_NAME} from "@/constants";
+import {APP_NAME} from "@/lib/constants";
 
 
 export default function Navbar() {
