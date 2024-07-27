@@ -4,12 +4,29 @@ import "./globals.css";
 import {clsx} from "clsx";
 import Providers from "@/components/provider";
 import {Toaster} from "@/components/ui/toaster";
+import {APP_NAME, BASE_URL, X_CREATOR} from "@/constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Code | エンジニアのためのコード共有サービス",
+  metadataBase: new URL(BASE_URL),
+  title: {
+      default: `${APP_NAME} | エンジニアのためのコード共有サービス`,
+      template: `%s | ${APP_NAME}`
+  },
   description: "Codeは構築済みアプリ、APIを共有するサービスです。Codeに共有されているコードを使ってアプリ開発、プログラミング勉強をスタートさせましょう。",
+  robots: {
+    follow: true,
+    index: true
+  },
+  ...(X_CREATOR &&
+      BASE_URL && {
+      twitter: {
+        card: 'summary_large_image',
+        creator: X_CREATOR,
+        site: BASE_URL
+      }
+  }),
   icons: {
     apple: [
         {
@@ -46,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <head>
         <meta httpEquiv="content-language" content="ja" />
         <meta name="google" content="notranslate" />
