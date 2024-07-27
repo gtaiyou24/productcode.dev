@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Logo from "@/components/layout/navbar/logo";
+import Logo from "@/components/logo";
 import {APP_NAME} from "@/lib/constants";
 
 const Footer = () => {
