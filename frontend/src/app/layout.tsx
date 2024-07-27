@@ -5,6 +5,7 @@ import {clsx} from "clsx";
 import Providers from "@/components/provider";
 import {Toaster} from "@/components/ui/toaster";
 import {APP_NAME, BASE_URL, X_CREATOR} from "@/constants";
+import Footer from "@/components/layout/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -71,6 +72,7 @@ export default function RootLayout({
       <body className={clsx(inter.className, 'flex flex-col min-h-screen')}>
         <Providers>
           <main className="flex-grow">{children}</main>
+          <Footer />
           <Toaster />
         </Providers>
       </body>
