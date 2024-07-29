@@ -63,4 +63,28 @@ export const PRODUCTS = [
             }
         ]
     },
+    {
+        id: '3',
+        name: "Nextra: Docs Starter Kit",
+        description: "シンプル、パワフル、フレキシブルなマークダウン・ドキュメント・サイト。 Next.jsで構築されています",
+        featuredImage: {
+            url: "https://images.ctfassets.net/e5382hct74si/5RZetTd7rd1mQtoZt2fajA/747eabb89b6378ecfc0ef433f5e47a01/CleanShot_2022-12-02_at_12.07.44.png"
+        },
+        sourceUrl: "https://github.com/shuding/nextra-docs-template",
+        demoUrl: "https://nextra-docs-template.vercel.app/",
+        tags: [
+            {
+                name: "Framework",
+                values: ["Next.js"]
+            },
+            {
+                name: "UseCase",
+                values: ["Documentation"],
+            },
+            {
+                name: "CSS",
+                values: ["Tailwind"]
+            }
+        ]
+    },
 ] as Product[];

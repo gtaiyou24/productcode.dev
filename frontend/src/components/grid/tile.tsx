@@ -22,11 +22,11 @@ export function GridTileProduct({
                   'transition duration-300 ease-in-out group-hover:scale-105': isInteractive
               })} {...props} />
           </div>
-          <CardContent className="p-5">
-              <h3 className="text-lg font-semibold mb-2">{name}</h3>
-              <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{description}</p>
+          <CardContent className="px-5 gap-2 mb-4">
+              <h3 className="text-lg font-semibold">{name}</h3>
+              <p className="text-sm text-muted-foreground line-clamp-2">{description}</p>
           </CardContent>
-          <CardFooter className="flex justify-between items-center px-5 py-3 border-zinc-800">
+          <CardFooter className="flex justify-between items-center px-5 border-zinc-800">
               <div className="flex items-center">
                   <span className="text-zinc-500 text-xs mr-1">by</span>
                   <Button variant="link" className="text-zinc-300 hover:text-white text-xs p-0">
