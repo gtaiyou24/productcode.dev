@@ -16,15 +16,15 @@ export function GridTileProduct({
   description?: string;
 } & React.ComponentProps<typeof Image>) {
   return (
-      <Card className="group w-full max-w-sm text-white overflow-hidden rounded-lg border border-zinc-800 bg-white dark:bg-black hover:border-primary">
+      <Card className="group w-full max-w-sm overflow-hidden rounded-lg border border-secondary text-primary bg-white dark:bg-black hover:border-primary">
           <div className="aspect-[4/3] relative overflow-hidden">
               <Image className={clsx("w-full h-full object-contain", {
                   'transition duration-300 ease-in-out group-hover:scale-105': isInteractive
               })} {...props} />
           </div>
           <CardContent className="p-5">
-              <h2 className="text-lg font-semibold mb-2">{name}</h2>
-              <p className="text-sm text-zinc-400 mb-4">{description}</p>
+              <h3 className="text-lg font-semibold mb-2">{name}</h3>
+              <p className="text-sm text-muted-foreground mb-4 line-clamp-2">{description}</p>
           </CardContent>
           <CardFooter className="flex justify-between items-center px-5 py-3 border-zinc-800">
               <div className="flex items-center">
