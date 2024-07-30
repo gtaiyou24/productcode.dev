@@ -1,7 +1,7 @@
 import {FilterListItem, Product} from "@/lib/types";
 
 export const BASE_URL = process.env.NODE_ENV === "production"
-    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` ?? 'https://thecode.dev'
+    ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` ?? 'https://productcode.dev'
     : 'http://localhost:3000';
 
 export const APP_NAME = 'Product Code';
