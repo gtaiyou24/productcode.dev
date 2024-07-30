@@ -1,4 +1,4 @@
-import {Product} from "@/lib/types";
+import {FilterListItem, Product} from "@/lib/types";
 
 export const BASE_URL = process.env.NODE_ENV === "production"
     ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}` ?? 'https://thecode.dev'
@@ -54,7 +54,7 @@ export const PRODUCTS = [
                 values: ["Tailwind"],
             },
             {
-                name: "DataBase",
+                name: "Database",
                 values: ["Vercel KV"],
             },
             {
@@ -88,3 +88,15 @@ export const PRODUCTS = [
         ]
     },
 ] as Product[];
+
+
+export const filterList: FilterListItem[] = [
+    { handle: 'usecase', name: 'Use Case', options: [
+        'AI', 'Starter', 'Ecommerce', 'Blog', 'Edge Functions', 'Edge Middleware', 'Edge Config', 'Portfolio', 'SaaS',
+        'CMS', 'Cron', 'Multi-tenant apps', 'Realtime Apps', 'Documentation', 'Virtual Event', 'Monorepos'
+    ] },
+    { handle: 'framework', name: 'Framework', options: [
+        "Next.js", "Svelte", "React", "Python", "Vue", "Nuxt", "Remix", "Qwik", "Astro", "Solid", "Preact", "Gatsby",
+        "Angular", "Hugo", "Other"
+    ] },
+];

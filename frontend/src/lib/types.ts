@@ -7,12 +7,11 @@ export type Image = {
 };
 
 export type Tag = {
-  id: string;
   name: TagName;
   values: string[];
 };
 
-type TagName = 'Framework' | 'UseCase' | 'CSS' | 'DataBase' | 'Auth';
+type TagName = 'Framework' | 'Use Case' | 'CSS' | 'Database' | 'CMS' | 'Authentication' | 'Analytics';
 
 
 export type Product = {
@@ -23,4 +22,10 @@ export type Product = {
   sourceUrl: string;
   demoUrl: string;
   tags: Tag[];
+};
+
+export type FilterListItem = {
+  handle: string;
+  name: string;
+  options: string[];
 };
