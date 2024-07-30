@@ -2,6 +2,7 @@ import {Suspense} from "react";
 import {Search} from "lucide-react";
 import {FilterListItem} from "@/lib/types";
 import {FilterItem} from "@/components/layout/search/filter/item";
+import FilterItemDrawer from "@/components/layout/search/filter/drawer";
 
 const FilterItemList = ({ list }: { list: FilterListItem[]; }) => {
     return (
@@ -35,8 +36,7 @@ export default function FilterList({ list }: { list: FilterListItem[] }) {
             </ul>
             <ul className="md:hidden">
                 <Suspense fallback={null}>
-                    SP画面のフィルタリング
-                    {/*<FilterItemDropdown list={list} />*/}
+                    <FilterItemDrawer list={list} />
                 </Suspense>
             </ul>
         </nav>
