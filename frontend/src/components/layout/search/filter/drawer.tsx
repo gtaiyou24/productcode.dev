@@ -10,6 +10,7 @@ import {
 import {FilterListItem} from "@/lib/types";
 import {ChevronRight, Filter, Search} from "lucide-react";
 import {FilterItem} from "@/components/layout/search/filter/item";
+import {ScrollArea} from "@/components/ui/scroll-area";
 
 export default function FilterItemDrawer({ list }: { list: FilterListItem[]; }) {
     return (
@@ -32,17 +33,19 @@ export default function FilterItemDrawer({ list }: { list: FilterListItem[]; }) 
                         <ChevronRight size={18} className={`transform transition duration-300 ease-in-out`} />
                     </button>
                 </DrawerTrigger>
-                <DrawerContent className="p-4 max-h-screen">
+                <DrawerContent>
                     <DrawerHeader>
                         <DrawerTitle>フィルター</DrawerTitle>
                     </DrawerHeader>
-                    <ul>
-                        {list.map((item, index) => (
-                            <li key={index} className="py-2 border-b">
-                                <FilterItem item={item} />
-                            </li>
-                        ))}
-                    </ul>
+                    <ScrollArea className="h-96">
+                        <ul>
+                            {list.map((item, index) => (
+                                <li key={index} className="p-4 border-b">
+                                    <FilterItem item={item} />
+                                </li>
+                            ))}
+                        </ul>
+                    </ScrollArea>
                 </DrawerContent>
             </Drawer>
         </>
