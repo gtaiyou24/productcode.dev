@@ -87,6 +87,38 @@ export const PRODUCTS = [
             }
         ]
     },
+    {
+        id: '4',
+        name: "Admin Dashboard Template",
+        description: "Tailwind CSS、Postgres、Authでセットアップしたダッシュボード",
+        featuredImage: {
+            url: "https://images.ctfassets.net/e5382hct74si/fmmsa0AREAIvMGl9PzGew/c3b4fd4674140be0813c0aa21007c381/CleanShot_2024-07-07_at_23.45.58_2x.png"
+        },
+        sourceUrl: "https://github.com/vercel/nextjs-postgres-nextauth-tailwindcss-template",
+        demoUrl: "https://next-admin-dash.vercel.app/",
+        tags: [
+            {
+                name: "Framework",
+                values: ["Next.js"]
+            },
+            {
+                name: "Use Case",
+                values: ["Starter", "Authentication"]
+            },
+            {
+                name: "CSS",
+                values: ["Tailwind"]
+            },
+            {
+                name: "Database",
+                values: ["Vercel Postgres"]
+            },
+            {
+                name: "Auth",
+                values: ["NextAuth.js"]
+            }
+        ]
+    }
 ] as Product[];
 
 
@@ -99,11 +131,17 @@ export const filterList: FilterListItem[] = [
         "Next.js", "Svelte", "React", "Python", "Vue", "Nuxt", "Remix", "Qwik", "Astro", "Solid", "Preact", "Gatsby",
         "Angular", "Hugo", "Other"
     ] },
+    { handle: 'language', name: 'プログラム言語', options: [
+        "Vue", "React", "Python", "Astro", "Go", "Ruby", "PHP"
+    ] },
     { handle: 'css', name: 'CSS', options: [
         "Tailwind", "Chakra", "Radix UI", "CSS Modules", "CSS-in-JSX", "Material UI", "Styled Components", "Vanilla CSS",
         "Pinceau"
     ] },
-    { handle: 'authentication', name: '認証ツール', options: [
+    { handle: 'database', name: 'データベース', options: [
+        "MySQL", "Postgresql", "Cassandra", "Dynamodb", "Redis", "BigTable"
+    ] },
+    { handle: 'authentication', name: '認証', options: [
         "NextAuth.js", "Auth0", "Fauna Auth", "Supabase Auth", "Whop Auth"
     ] },
 ];

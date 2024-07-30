@@ -13,7 +13,7 @@ export function FilterItem({ item }: { item: FilterListItem }) {
     return (
         <>
             <button className="flex items-center justify-between w-full text-left" onClick={toggleItem}>
-                <span className="font-extralight">{item.name}</span>
+                <span className="text-sm font-extralight">{item.name}</span>
                 <ChevronRight
                     size={18}
                     className={`transform transition duration-300 ease-in-out ${open ? 'rotate-90' : 'rotate-0'}`}
