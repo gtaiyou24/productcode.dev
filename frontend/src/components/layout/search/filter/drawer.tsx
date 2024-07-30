@@ -25,7 +25,7 @@ export default function FilterItemDrawer({ list }: { list: FilterListItem[]; }) 
             </div>
             <Drawer>
                 <DrawerTrigger asChild>
-                    <button className="flex text-sm items-center justify-between w-full text-left py-2 border-b focus:outline-none focus:ring-1 focus:ring-current">
+                    <button className="flex text-sm items-center justify-between w-full text-left py-2 border-b">
                         <span className="flex gap-1 items-center">
                             <Filter className="h-4 w-4 text-gray-500" />
                             フィルター
