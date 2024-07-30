@@ -6,7 +6,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: code-backend
+    container_name: productcode-backend
     env_file:
       - ./backend/.env.local
       - ./backend/.env
@@ -48,18 +48,18 @@ services:
   mysql:
     image: mysql:8.0
     platform: linux/x86_64
-    container_name: code-mysql
+    container_name: productcode-mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_USER=user
       - MYSQL_PASSWORD=pass
-      - MYSQL_DATABASE=code
+      - MYSQL_DATABASE=productcode
       - TZ=Asia/Tokyo
     ports:
       - "3306:3306"
     volumes:
       - ./infrastructure/mysql/conf.d:/etc/mysql/conf.d
-      - code-mysql-volume:/var/lib/mysql
+      - productcode-mysql-volume:/var/lib/mysql
     tty: true
     healthcheck:
       test: mysqladmin ping -h 127.0.0.1 -u$$DATABASE_USERNAME -p$$DATABASE_PASSWORD
@@ -72,16 +72,16 @@ services:
   postgresql:
     image: postgres:14
     platform: linux/x86_64
-    container_name: code-postgresql
+    container_name: productcode-postgresql
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=pass
-      - POSTGRES_DB=code
+      - POSTGRES_DB=productcode
       - TZ=Asia/Tokyo
     ports:
       - "5432:5432"
     volumes:
-      - code-postgresql-volume:/var/lib/postgresql
+      - productcode-postgresql-volume:/var/lib/postgresql
     tty: true
     healthcheck:
       test: ["CMD-SHELL", "pg_isready"]
@@ -93,14 +93,14 @@ services:
   # Mail Server
   mailhog:
     image: mailhog/mailhog
-    container_name: code-mailhog
+    container_name: productcode-mailhog
     ports:
       - "8025:8025"
 
 volumes:
   # MySQL
-  code-mysql-volume:
+  productcode-mysql-volume:
     driver: 'local'
   # Postgresql
-  code-postgresql-volume:
+  productcode-postgresql-volume:
     driver: 'local'

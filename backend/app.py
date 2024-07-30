@@ -36,7 +36,7 @@ async def lifespan(app: FastAPI):
     # 終了後
 
 
-app = FastAPI(title="CODE Backend", root_path=os.getenv("OPENAPI_PREFIX"), lifespan=lifespan)
+app = FastAPI(title="Product Code Backend", root_path=os.getenv("OPENAPI_PREFIX"), lifespan=lifespan)
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
