@@ -15,8 +15,8 @@ export const metadata: Metadata = {
       default: `${APP_NAME} | エンジニアのためのコード共有サービス`,
       template: `%s | ${APP_NAME}`
   },
-  description: "Codeは構築済みアプリ、APIを共有するサービスです。Codeに共有されているコードを使ってアプリ開発、プログラミング勉強をスタートさせましょう。",
-  keywords: ["Code", "コード", "プログラミング"],
+  description: `${APP_NAME}は構築済みアプリ、APIを共有するサービスです。${APP_NAME}に共有されているコードを使ってアプリ開発、プログラミング勉強をスタートさせましょう。`,
+  keywords: [APP_NAME, "コード", "プログラミング", "オープンソース", "エンジニア"],
   robots: {
     follow: true,
     index: true
