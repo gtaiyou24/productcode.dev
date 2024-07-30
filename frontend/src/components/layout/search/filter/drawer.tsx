@@ -24,15 +24,15 @@ export default function FilterItemDrawer({ list }: { list: FilterListItem[]; }) 
             </div>
             <Drawer>
                 <DrawerTrigger asChild>
-                    <button className="flex text-base font-semibold items-center justify-between w-full text-left py-2 border-b focus:outline-none focus:ring-1 focus:ring-current">
+                    <button className="flex text-sm items-center justify-between w-full text-left py-2 border-b focus:outline-none focus:ring-1 focus:ring-current">
                         <span className="flex gap-1 items-center">
-                            <Filter className="h-5 w-5 text-gray-500" />
+                            <Filter className="h-4 w-4 text-gray-500" />
                             フィルター
                         </span>
                         <ChevronRight size={18} className={`transform transition duration-300 ease-in-out`} />
                     </button>
                 </DrawerTrigger>
-                <DrawerContent className="p-4">
+                <DrawerContent className="p-4 max-h-screen">
                     <DrawerHeader>
                         <DrawerTitle>フィルター</DrawerTitle>
                     </DrawerHeader>
