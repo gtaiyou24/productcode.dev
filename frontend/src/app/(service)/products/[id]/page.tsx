@@ -11,7 +11,7 @@ export default function ProductDetailPage({ params }: { params: { id: string; } 
     const product = PRODUCTS.filter((product) => product.id == params.id).pop();
     if (!product) return notFound();
     return (
-        <div className="p-6 mx-auto max-w-screen-xl px-4 pb-4 text-black dark:text-white">
+        <div className="p-6 mb-8 md:mb-0 mx-auto max-w-screen-xl px-4 pb-4 text-black dark:text-white">
             <Link href="/" className="flex gap-2 items-center text-sm tracking-tighter text-muted-foreground">
                 <ArrowLeft className="h-4 w-4" />
                 一覧ページに戻る
