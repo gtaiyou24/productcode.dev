@@ -18,7 +18,7 @@ const FilterItemList = ({ list }: { list: FilterListItem[]; }) => {
             </div>
             <ul>
                 {list.map((item, index) => (
-                    <li key={index} className="py-2">
+                    <li key={index} className="py-2 border-b">
                         <FilterItem item={item} />
                     </li>
                 ))}
