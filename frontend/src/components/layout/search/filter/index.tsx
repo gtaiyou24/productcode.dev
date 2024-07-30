@@ -1,5 +1,3 @@
-"use client";
-
 import {Suspense} from "react";
 import {Search} from "lucide-react";
 import {FilterListItem} from "@/lib/types";
@@ -30,9 +28,6 @@ const FilterItemList = ({ list }: { list: FilterListItem[]; }) => {
 export default function FilterList({ list }: { list: FilterListItem[] }) {
     return (
         <nav>
-            <h3 className="hidden text-base font-bold text-black md:block dark:text-white mb-4">
-                絞り込み
-            </h3>
             <ul className="hidden md:block">
                 <Suspense fallback={null}>
                     <FilterItemList list={list} />
