@@ -91,12 +91,19 @@ export const PRODUCTS = [
 
 
 export const filterList: FilterListItem[] = [
-    { handle: 'usecase', name: 'Use Case', options: [
+    { handle: 'usecase', name: 'アプリの種類', options: [
         'AI', 'Starter', 'Ecommerce', 'Blog', 'Edge Functions', 'Edge Middleware', 'Edge Config', 'Portfolio', 'SaaS',
         'CMS', 'Cron', 'Multi-tenant apps', 'Realtime Apps', 'Documentation', 'Virtual Event', 'Monorepos'
     ] },
-    { handle: 'framework', name: 'Framework', options: [
+    { handle: 'framework', name: 'フレームワーク', options: [
         "Next.js", "Svelte", "React", "Python", "Vue", "Nuxt", "Remix", "Qwik", "Astro", "Solid", "Preact", "Gatsby",
         "Angular", "Hugo", "Other"
+    ] },
+    { handle: 'css', name: 'CSS', options: [
+        "Tailwind", "Chakra", "Radix UI", "CSS Modules", "CSS-in-JSX", "Material UI", "Styled Components", "Vanilla CSS",
+        "Pinceau"
+    ] },
+    { handle: 'authentication', name: '認証ツール', options: [
+        "NextAuth.js", "Auth0", "Fauna Auth", "Supabase Auth", "Whop Auth"
     ] },
 ];
