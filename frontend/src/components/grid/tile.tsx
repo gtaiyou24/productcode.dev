@@ -16,7 +16,7 @@ export function GridTileProduct({
   description?: string;
 } & React.ComponentProps<typeof Image>) {
   return (
-      <Card className="group w-full h-full overflow-hidden rounded-lg border border-secondary text-primary bg-white dark:bg-black hover:border-primary">
+      <Card className="group w-full h-full overflow-hidden rounded-lg border border-secondary text-primary bg-white dark:bg-black hover:border-primary shadow-lg hover:shadow-2xl">
           <div className="aspect-[4/3] relative overflow-hidden">
               <Image className={clsx("w-full h-full object-contain", {
                   'transition duration-300 ease-in-out group-hover:scale-105': isInteractive
