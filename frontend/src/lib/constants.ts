@@ -270,6 +270,38 @@ export const PRODUCTS: Product[] = [
                 values: ["Supabase Auth"]
             }
         ]
+    },
+    {
+        id: "11",
+        name: "Gemini AI Chatbot",
+        description: "Vercel AI SDK、Next.js、Reactを使用したGemini搭載チャットボット",
+        featuredImage: {
+            url: "https://images.ctfassets.net/e5382hct74si/1nvXeRtBeI8sLr1TwJn26j/78310e410e7f0c209b306c6bc50b4034/Gemini.jpg"
+        },
+        sourceUrl: "https://github.com/vercel-labs/gemini-chatbot",
+        demoUrl: "https://gemini.vercel.ai/",
+        tags: [
+            {
+                name: "フレームワーク",
+                values: ["Next.js"]
+            },
+            {
+                name: "カテゴリ",
+                values: ["AI", "Authentication"]
+            },
+            {
+                name: "CSS",
+                values: ["Tailwind"]
+            },
+            {
+                name: "データベース",
+                values: ["Vercel KV"]
+            },
+            {
+                name: "認証",
+                values: ["NextAuth.js"]
+            }
+        ]
     }
 ];
 
