@@ -9,7 +9,10 @@ export default function Home({
 }: {
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
-  const { q } = searchParams as { q?: string, p: '1' };
+  const { q, ...tags  } = searchParams as { q?: string };
+  // @ts-ignore
+  const selectedTags: string[] = Object.keys(tags).map((key) => tags[key]).flat();
+
   const filterByKeyword = (product: Product, q?: string): boolean => {
       if (!q) return true;
       return (
@@ -18,7 +21,18 @@ export default function Home({
           product.tags.some((tag) => tag.values.some((value) => value.toLowerCase().includes(q.toLowerCase())))
       );
   };
-  const products = PRODUCTS.filter((product) => filterByKeyword(product, q));
+  const filterByTags = (product: Product): boolean => {
+      if (selectedTags.length == 0) {
+          return true;
+      }
+      return product.tags.some((tag) => tag.values.some((value) => {
+          let word = value.trim().replace(/\s+/g, '').toLowerCase();
+          return selectedTags.includes(word);
+      }));
+  };
+  const products = PRODUCTS
+      .filter((product) => filterByKeyword(product, q))
+      .filter((product) => filterByTags(product));
   return (
     <div className="p-6 mx-auto max-w-screen-xl">
       <div className="text-center py-4 lg:py-12 space-y-2 animate-in fade-in slide-in-from-bottom-3 duration-1000 ease-in-out">
