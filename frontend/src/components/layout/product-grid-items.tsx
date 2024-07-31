@@ -16,8 +16,7 @@ export default function ProductGridItems({ products }: { products: Product[]; })
             <GridTileProduct
                 alt={product.name}
                 src={product.featuredImage?.url}
-                name={product.name}
-                description={product.description}
+                product={product}
                 fill
                 sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
             />

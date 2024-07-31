@@ -118,6 +118,78 @@ export const PRODUCTS = [
                 values: ["NextAuth.js"]
             }
         ]
+    },
+    {
+        id: '5',
+        name: "Hume AI - Empathic Voice Interface Starter",
+        description: "このテンプレートは、Hume AIのEmpathic Voice Interfaceを使って音声チャットを作成します",
+        featuredImage: {
+            url: "https://images.ctfassets.net/e5382hct74si/4Cn2WWmBMqU3OsPHsWKfab/9963cf136b430d071947df923cefb4e9/hume.png"
+        },
+        sourceUrl: "https://github.com/humeai/hume-evi-next-js-starter",
+        demoUrl: "https://hume-evi-next-js-starter.vercel.app/",
+        tags: [
+            {
+                name: "フレームワーク",
+                values: ["Next.js"]
+            },
+            {
+                name: "カテゴリ",
+                values: ["AI"]
+            },
+            {
+                name: "CSS",
+                values: ["Tailwind"]
+            }
+        ]
+    },
+    {
+        id: '6',
+        name: "Next.js Commerce",
+        description: "Shopifyで高性能コマースを実現するスターターキット",
+        featuredImage: {
+            url: "https://images.ctfassets.net/e5382hct74si/1RzhtOHEvW7xyn9qAsdr5E/85331c32482b7d022585c39ddb3ae9f2/CleanShot_2023-07-24_at_21.37.15_2x.png"
+        },
+        sourceUrl: "https://github.com/vercel/commerce",
+        demoUrl: "https://demo.vercel.store/",
+        tags: [
+            {
+                name: "フレームワーク",
+                values: ["Next.js"]
+            },
+            {
+                name: "カテゴリ",
+                values: ["ECサイト"]
+            },
+            {
+                name: "CSS",
+                values: ["Tailwind"]
+            }
+        ]
+    },
+    {
+        id: '7',
+        name: "Next.js App Router Playground",
+        description: "Vercel 公式の Next.js App Router 機能の例",
+        featuredImage: {
+            url: "https://images.ctfassets.net/e5382hct74si/k9BYNIi5HwkHop568SjEI/cfb7e8215a11667d32265b34c43b4b5b/CleanShot_2022-10-25_at_14.38.59_2x.png"
+        },
+        sourceUrl: "https://github.com/vercel/next-app-router-playground",
+        demoUrl: "https://app-router.vercel.app/",
+        tags: [
+            {
+                name: "フレームワーク",
+                values: ["Next.js"]
+            },
+            {
+                name: "カテゴリ",
+                values: ["Starter"]
+            },
+            {
+                name: "CSS",
+                values: ["Tailwind"]
+            }
+        ]
     }
 ] as Product[];
 
