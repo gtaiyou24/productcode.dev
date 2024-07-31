@@ -21,10 +21,9 @@ export default function SearchInput() {
             <Input
                 type="search"
                 placeholder="キーワードを入力..."
-                size={16}
                 defaultValue={readonlyURLSearchParams.get('q') ?? undefined}
                 onChange={onChange}
-                className="bg-gray-50 text-sm text-black dark:bg-gray-800 dark:text-white pl-9 pr-4 py-2 rounded-md"
+                className="bg-gray-50 text-black dark:bg-gray-800 dark:text-white pl-9 pr-4 py-2 rounded-md"
             />
         </div>
     );
