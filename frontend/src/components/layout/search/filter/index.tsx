@@ -1,20 +1,26 @@
 import {Suspense} from "react";
 import {FilterListItem} from "@/lib/types";
-import {FilterItem} from "@/components/layout/search/filter/item";
 import FilterItemDrawer from "@/components/layout/search/filter/drawer";
 import SearchInput from "@/components/form/search-input";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import FilterCheckbox from "@/components/form/filter-checkbox";
 
 const FilterItemList = ({ list }: { list: FilterListItem[]; }) => {
     return (
         <>
             <SearchInput />
-            <ul>
+            <Accordion type="single" collapsible>
                 {list.map((item, index) => (
-                    <li key={index} className="py-4 border-b">
-                        <FilterItem item={item} />
-                    </li>
+                    <AccordionItem key={index} value={`${index}`}>
+                        <AccordionTrigger>{item.name}</AccordionTrigger>
+                        <AccordionContent className="grid gap-2">
+                            {item.options.map((option, optionIndex) => (
+                                <FilterCheckbox key={`${item.handle}-${option}`} id={`${item.handle}-${option}`} name={option} />
+                            ))}
+                        </AccordionContent>
+                    </AccordionItem>
                 ))}
-            </ul>
+            </Accordion>
         </>
     );
 };

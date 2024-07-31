@@ -9,9 +9,10 @@ import {
 } from "@/components/ui/drawer"
 import {FilterListItem} from "@/lib/types";
 import {ChevronRight, Filter, Search} from "lucide-react";
-import {FilterItem} from "@/components/layout/search/filter/item";
 import {ScrollArea} from "@/components/ui/scroll-area";
 import SearchInput from "@/components/form/search-input";
+import {Accordion, AccordionContent, AccordionItem, AccordionTrigger} from "@/components/ui/accordion";
+import FilterCheckbox from "@/components/form/filter-checkbox";
 
 export default function FilterItemDrawer({ list }: { list: FilterListItem[]; }) {
     return (
@@ -32,13 +33,18 @@ export default function FilterItemDrawer({ list }: { list: FilterListItem[]; }) 
                         <DrawerTitle>フィルター</DrawerTitle>
                     </DrawerHeader>
                     <ScrollArea className="h-96">
-                        <ul>
+                        <Accordion className="px-2" type="single" collapsible>
                             {list.map((item, index) => (
-                                <li key={index} className="p-4 border-b">
-                                    <FilterItem item={item} />
-                                </li>
+                                <AccordionItem key={index} value={`${index}`}>
+                                    <AccordionTrigger>{item.name}</AccordionTrigger>
+                                    <AccordionContent className="grid gap-2">
+                                        {item.options.map((option, optionIndex) => (
+                                            <FilterCheckbox key={`${item.handle}-${option}`} id={`${item.handle}-${option}`} name={option} />
+                                        ))}
+                                    </AccordionContent>
+                                </AccordionItem>
                             ))}
-                        </ul>
+                        </Accordion>
                     </ScrollArea>
                 </DrawerContent>
             </Drawer>
