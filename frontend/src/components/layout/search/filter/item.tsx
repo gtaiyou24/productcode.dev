@@ -12,8 +12,8 @@ export function FilterItem({ item }: { item: FilterListItem }) {
 
     return (
         <>
-            <button className="flex items-center justify-between w-full text-left" onClick={toggleItem}>
-                <span className="text-sm font-extralight">{item.name}</span>
+            <button className="group flex items-center justify-between w-full text-left" onClick={toggleItem}>
+                <span className="text-sm font-extralight duration-300 ease-in-out lg:group-hover:text-base">{item.name}</span>
                 <ChevronRight
                     size={18}
                     className={`transform transition duration-300 ease-in-out ${open ? 'rotate-90' : 'rotate-0'}`}
