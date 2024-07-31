@@ -2,7 +2,6 @@ import Image from 'next/image';
 import {Card, CardContent} from "@/components/ui/card";
 import clsx from "clsx";
 import {Product} from "@/lib/types";
-import {Button} from "@/components/ui/button";
 
 export function GridTileProduct({
   isInteractive = true,

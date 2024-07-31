@@ -12,7 +12,7 @@ export default function Home() {
               オープンソースのアプリを探す
           </h1>
           <p className="text-base lg:text-lg text-muted-foreground tracking-tighter leading-tight">
-              オープンソースのアプリ、API のコードで、アプリ開発をスタートさせましょう。
+              オープンソースのアプリ、API のコードで、アプリ開発をスタートさせましょう
           </p>
       </div>
       <div className="flex md:flex-row flex-col gap-8">
