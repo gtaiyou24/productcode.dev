@@ -190,6 +190,86 @@ export const PRODUCTS: Product[] = [
                 values: ["Tailwind"]
             }
         ]
+    },
+    {
+        id: '8',
+        name: "Next.js Enterprise Boilerplate",
+        description: "Tailwind CSS、Radix UI、TypeScript、ESLint、Prettier、Jest、Playwright、Storybookなどで構築されたエンタープライズグレードのNext.jsボイラープレート",
+        featuredImage: {
+            url: "https://images.ctfassets.net/e5382hct74si/5d5xUzoQnopRHlJF2Efa8c/a1ff3044f052fa69a562bdac4360671d/project-logo.png"
+        },
+        sourceUrl: "https://github.com/Blazity/next-enterprise",
+        demoUrl: "https://blazity.com/open-source/nextjs-enterprise-boilerplate",
+        tags: [
+            {
+                name: "フレームワーク",
+                values: ["Next.js"]
+            },
+            {
+                name: "カテゴリ",
+                values: ["SaaS", "Starter"]
+            },
+            {
+                name: "CSS",
+                values: ["Tailwind"]
+            }
+        ]
+    },
+    {
+        id: '9',
+        name: "Morphic: AI-powered answer engine",
+        description: "生成UIを備えたAI回答エンジン",
+        featuredImage: {
+            url: "https://images.ctfassets.net/e5382hct74si/4bu9bW4KbJbngc4H0rPV4Q/3c062ebb49d1e1bbc3115f6071f5d901/CleanShot_2024-04-08_at_20.22.17_2x.png"
+        },
+        sourceUrl: "https://github.com/miurla/morphic",
+        demoUrl: "https://www.morphic.sh/",
+        tags: [
+            {
+                name: "フレームワーク",
+                values: ["Next.js"]
+            },
+            {
+                name: "カテゴリ",
+                values: ["AI"]
+            },
+            {
+                name: "CSS",
+                values: ["Tailwind"]
+            }
+        ]
+    },
+    {
+        id: '10',
+        name: "AI Headshot Generator",
+        description: "Next.js、Leap AI、VercelによるプロフェッショナルAIヘッドショット・ジェネレーター・スターターキット",
+        featuredImage: {
+            url: "https://images.ctfassets.net/e5382hct74si/1CEDfTwO5vPEiNMgN2Y1t6/245d1e0c11c4d8e734fbe345b9ecdc7c/demo.png"
+        },
+        sourceUrl: "https://github.com/astriaai/headshots-starter",
+        demoUrl: "https://www.getheadshots.ai/",
+        tags: [
+            {
+                name: "フレームワーク",
+                values: ["Next.js"]
+            },
+            {
+                name: "カテゴリ",
+                values: ["AI", "Authentication"]
+            },
+            {
+                name: "CSS",
+                values: ["Tailwind"]
+            },
+            {
+                name: "データベース",
+                values: ["Supabase"]
+            },
+            {
+                name: "認証",
+                values: ["Supabase Auth"]
+            }
+        ]
     }
 ];
 
