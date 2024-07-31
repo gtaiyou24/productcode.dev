@@ -204,7 +204,7 @@ export const filterList: FilterListItem[] = [
         "Angular", "Hugo", "Other"
     ] },
     { handle: 'language', name: 'プログラミング言語', options: [
-        "Vue", "React", "Python", "Astro", "Go", "Ruby", "PHP"
+        "JavaScript", "Typescript", "Python", "Go", "Java", "Ruby", "PHP"
     ] },
     { handle: 'css', name: 'CSS', options: [
         "Tailwind", "Chakra", "Radix UI", "CSS Modules", "CSS-in-JSX", "Material UI", "Styled Components", "Vanilla CSS",

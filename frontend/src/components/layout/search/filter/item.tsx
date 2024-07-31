@@ -2,9 +2,10 @@
 
 import {FilterListItem} from "@/lib/types";
 import {ChevronRight} from "lucide-react";
-import {Checkbox} from "@headlessui/react";
 import {useState} from "react";
 import clsx from "clsx";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
 
 export function FilterItem({ item }: { item: FilterListItem }) {
     const [open, setOpen] = useState<boolean>(false);
@@ -19,20 +20,19 @@ export function FilterItem({ item }: { item: FilterListItem }) {
                     className={`transform transition duration-300 ease-in-out ${open ? 'rotate-90' : 'rotate-0'}`}
                 />
             </button>
-            <ul className={clsx(
-                "ml-4 mt-2 transition-all duration-500 ease-in-out max-h-0 overflow-hidden",
-                {
-                    hidden: !open
-                }
-            )}
-                style={{ maxHeight: item.options ? '1000px' : '0' }}>
+            <div
+                className={clsx("grid gap-2 ml-4 mt-2 max-h-0 overflow-hidden", { hidden: !open })}
+                style={{ maxHeight: item.options ? '1000px' : '0' }}
+            >
                 {item.options.map((option, optionIndex) => (
-                    <li key={optionIndex} className="flex items-center space-x-2 py-1">
-                        <Checkbox id={`option-${optionIndex}`} />
-                        <label htmlFor={`option-${optionIndex}`} className="text-sm">{option}</label>
-                    </li>
+                    <Button key={optionIndex} asChild variant="secondary" size="sm" className="justify-start rounded-lg">
+                      <div className="flex gap-2">
+                        <Checkbox id={`${item.handle}-${optionIndex}`} />
+                        <label htmlFor={`${item.handle}-${optionIndex}`} className="text-sm w-full">{option}</label>
+                      </div>
+                    </Button>
                 ))}
-            </ul>
+            </div>
         </>
     );
 }
