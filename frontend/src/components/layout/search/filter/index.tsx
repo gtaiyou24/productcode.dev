@@ -1,22 +1,13 @@
 import {Suspense} from "react";
-import {Search} from "lucide-react";
 import {FilterListItem} from "@/lib/types";
 import {FilterItem} from "@/components/layout/search/filter/item";
 import FilterItemDrawer from "@/components/layout/search/filter/drawer";
-import {Input} from "@/components/ui/input";
+import SearchInput from "@/components/form/search-input";
 
 const FilterItemList = ({ list }: { list: FilterListItem[]; }) => {
     return (
         <>
-            <div className="relative text-sm mb-4">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
-                <Input
-                    type="text"
-                    placeholder="キーワードを入力..."
-                    size={16}
-                    className="bg-gray-50 text-sm text-black dark:bg-gray-800 dark:text-white pl-9 pr-4 py-2 rounded-md"
-                />
-            </div>
+            <SearchInput />
             <ul>
                 {list.map((item, index) => (
                     <li key={index} className="py-4 border-b">

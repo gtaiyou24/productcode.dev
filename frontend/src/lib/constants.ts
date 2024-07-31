@@ -6,7 +6,7 @@ export const BASE_URL = process.env.NODE_ENV === "production"
 
 export const APP_NAME = 'Product Code';
 export const X_CREATOR = '@tm_taiyo';
-export const PRODUCTS = [
+export const PRODUCTS: Product[] = [
     {
         id: '1',
         name: "Image Gallery Starter",
@@ -18,11 +18,11 @@ export const PRODUCTS = [
         demoUrl: "https://nextjsconf-pics.vercel.app/",
         tags: [
             {
-                name: "Framework",
+                name: "フレームワーク",
                 values: ["Next.js"]
             },
             {
-                name: "UseCase",
+                name: "カテゴリ",
                 values: ["Starter"]
             },
             {
@@ -42,11 +42,11 @@ export const PRODUCTS = [
         demoUrl: "https://chat.vercel.ai/",
         tags: [
             {
-                name: "Framework",
+                name: "フレームワーク",
                 values: ["Next.js"]
             },
             {
-                name: "UseCase",
+                name: "カテゴリ",
                 values: ["AI", "Authentication"],
             },
             {
@@ -54,11 +54,11 @@ export const PRODUCTS = [
                 values: ["Tailwind"],
             },
             {
-                name: "Database",
+                name: "データベース",
                 values: ["Vercel KV"],
             },
             {
-                name: 'Auth',
+                name: '認証',
                 values: ["NextAuth.js"],
             }
         ]
@@ -74,11 +74,11 @@ export const PRODUCTS = [
         demoUrl: "https://nextra-docs-template.vercel.app/",
         tags: [
             {
-                name: "Framework",
+                name: "フレームワーク",
                 values: ["Next.js"]
             },
             {
-                name: "UseCase",
+                name: "カテゴリ",
                 values: ["Documentation"],
             },
             {
@@ -98,11 +98,11 @@ export const PRODUCTS = [
         demoUrl: "https://next-admin-dash.vercel.app/",
         tags: [
             {
-                name: "Framework",
+                name: "フレームワーク",
                 values: ["Next.js"]
             },
             {
-                name: "Use Case",
+                name: "カテゴリ",
                 values: ["Starter", "Authentication"]
             },
             {
@@ -110,11 +110,11 @@ export const PRODUCTS = [
                 values: ["Tailwind"]
             },
             {
-                name: "Database",
+                name: "データベース",
                 values: ["Vercel Postgres"]
             },
             {
-                name: "Auth",
+                name: "認証",
                 values: ["NextAuth.js"]
             }
         ]
@@ -191,7 +191,7 @@ export const PRODUCTS = [
             }
         ]
     }
-] as Product[];
+];
 
 
 export const filterList: FilterListItem[] = [
@@ -203,7 +203,7 @@ export const filterList: FilterListItem[] = [
         "Next.js", "Svelte", "React", "Python", "Vue", "Nuxt", "Remix", "Qwik", "Astro", "Solid", "Preact", "Gatsby",
         "Angular", "Hugo", "Other"
     ] },
-    { handle: 'language', name: 'プログラム言語', options: [
+    { handle: 'language', name: 'プログラミング言語', options: [
         "Vue", "React", "Python", "Astro", "Go", "Ruby", "PHP"
     ] },
     { handle: 'css', name: 'CSS', options: [

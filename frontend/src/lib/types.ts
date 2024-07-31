@@ -1,9 +1,9 @@
 
 export type Image = {
   url: string;
-  altText: string;
-  width: number;
-  height: number;
+  altText?: string;
+  width?: number;
+  height?: number;
 };
 
 export type Tag = {
@@ -11,7 +11,7 @@ export type Tag = {
   values: string[];
 };
 
-type TagName = 'Framework' | 'Use Case' | 'CSS' | 'Database' | 'CMS' | 'Authentication' | 'Analytics';
+type TagName = 'フレームワーク' | 'プログラミング言語' | 'カテゴリ' | 'CSS' | 'データベース' | 'CMS' | '認証' | '分析';
 
 
 export type Product = {
@@ -26,6 +26,6 @@ export type Product = {
 
 export type FilterListItem = {
   handle: string;
-  name: string;
+  name: TagName;
   options: string[];
 };

@@ -2,9 +2,23 @@ import {filterList, PRODUCTS} from "@/lib/constants";
 import Grid from "@/components/grid";
 import ProductGridItems from "@/components/layout/product-grid-items";
 import FilterList from "@/components/layout/search/filter";
+import {Product} from "@/lib/types";
 
-export default function Home() {
-  const products = PRODUCTS;
+export default function Home({
+  searchParams
+}: {
+  searchParams?: { [key: string]: string | string[] | undefined };
+}) {
+  const { q } = searchParams as { q?: string, p: '1' };
+  const filterByKeyword = (product: Product, q?: string): boolean => {
+      if (!q) return true;
+      return (
+          product.name.toLowerCase().includes(q.toLowerCase()) ||
+          product.description?.toLowerCase().includes(q.toLowerCase()) ||
+          product.tags.some((tag) => tag.values.some((value) => value.toLowerCase().includes(q.toLowerCase())))
+      );
+  };
+  const products = PRODUCTS.filter((product) => filterByKeyword(product, q));
   return (
     <div className="p-6 mx-auto max-w-screen-xl">
       <div className="text-center py-4 lg:py-12 space-y-2 animate-in fade-in slide-in-from-bottom-3 duration-1000 ease-in-out">

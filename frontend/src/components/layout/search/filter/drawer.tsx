@@ -11,20 +11,12 @@ import {FilterListItem} from "@/lib/types";
 import {ChevronRight, Filter, Search} from "lucide-react";
 import {FilterItem} from "@/components/layout/search/filter/item";
 import {ScrollArea} from "@/components/ui/scroll-area";
-import {Input} from "@/components/ui/input";
+import SearchInput from "@/components/form/search-input";
 
 export default function FilterItemDrawer({ list }: { list: FilterListItem[]; }) {
     return (
         <>
-            <div className="relative mb-4">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" size={16} />
-                <Input
-                    type="text"
-                    placeholder="キーワードを入力..."
-                    size={16}
-                    className="bg-gray-50 text-sm text-black dark:bg-gray-800 dark:text-white pl-9 pr-4 py-2 rounded-md"
-                />
-            </div>
+            <SearchInput />
             <Drawer>
                 <DrawerTrigger asChild>
                     <button className="flex text-sm items-center justify-between w-full text-left py-2 border-b">
