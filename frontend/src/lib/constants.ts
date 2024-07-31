@@ -123,7 +123,7 @@ export const PRODUCTS = [
 
 
 export const filterList: FilterListItem[] = [
-    { handle: 'usecase', name: 'アプリの種類', options: [
+    { handle: 'usecase', name: 'カテゴリ', options: [
         'AI', 'Starter', 'Ecommerce', 'Blog', 'Edge Functions', 'Edge Middleware', 'Edge Config', 'Portfolio', 'SaaS',
         'CMS', 'Cron', 'Multi-tenant apps', 'Realtime Apps', 'Documentation', 'Virtual Event', 'Monorepos'
     ] },
