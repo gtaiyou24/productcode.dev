@@ -1,8 +1,8 @@
 # App
-fastapi==0.112.2
-uvicorn[standard]==0.30.6
-python-multipart==0.0.9
-pydantic-settings==2.4.0
+fastapi==0.115.0
+uvicorn[standard]==0.31.0
+python-multipart==0.0.12
+pydantic-settings==2.5.2
 
 # Auth
 passlib[bcrypt]==1.7.4
@@ -13,7 +13,7 @@ di4injector==0.0.2
 slf4py==0.0.4
 
 # DataBase
-SQLAlchemy==2.0.32
+SQLAlchemy==2.0.35
 mysqlclient==2.2.4 # MySQL
 psycopg2-binary==2.9.9  # Postgresql
 psycopg2==2.9.9  # Postgresql
@@ -24,4 +24,4 @@ html2text==2024.2.26
 # Other
 requests==2.32.3
 python-dotenv==1.0.1
-pytz==2024.1
+pytz==2024.2
